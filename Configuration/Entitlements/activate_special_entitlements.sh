@@ -20,6 +20,8 @@ else
 fi
 
 if [[ $TARGET_NAME = "App" ]]; then
+#    /usr/libexec/PlistBuddy -c "add com.apple.developer.carplay-driving-task bool true" "$ENTITLEMENTS_FILE"
+#    echo "warning: Carplay enabled"
   if [[ $CI && $CONFIGURATION != "Release" ]]; then
     echo "warning: Device name disabled for CI"
   elif [[ ${ENABLE_DEVICE_NAME} -eq 1 ]]; then

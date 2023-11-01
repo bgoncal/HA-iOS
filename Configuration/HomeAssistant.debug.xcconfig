@@ -7,6 +7,7 @@ PROVISIONING_PROFILE_SPECIFIER_QMQYCKL255_Extensions_PushProvider = Local Develo
 
 // apple did not give us the device name permission in the dev app
 ENABLE_DEVICE_NAME_QMQYCKL255 = 0
+ENABLE_CARPLAY_QMQYCKL255 = 1
 
 STRIP_INSTALLED_PRODUCT = NO
 

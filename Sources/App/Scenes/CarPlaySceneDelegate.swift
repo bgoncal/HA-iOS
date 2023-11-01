@@ -137,7 +137,7 @@ class CarPlayDelegate: UIResponder {
     }
     
     func setDomainListTemplate() {
-        domainsListTemplate = DomainsListTemplate(title: L10n.About.Logo.appTitle, entities: filteredEntities, ic: interfaceController!,
+        domainsListTemplate = DomainsListTemplate(title: L10n.About.Logo.ha, entities: filteredEntities, ic: interfaceController!,
                                                 listItemHandler: {[weak self] domain, entities in
             
             guard let self = self, let server = Current.servers.getServer(id: self.serverId) else {

@@ -107,6 +107,8 @@ public enum L10n {
     public enum Logo {
       /// Home Assistant Companion
       public static var appTitle: String { return L10n.tr("Localizable", "about.logo.app_title") }
+      /// Home Assistant
+      public static var ha: String { return L10n.tr("Localizable", "about.logo.ha") }
       /// Awaken Your Home
       public static var tagline: String { return L10n.tr("Localizable", "about.logo.tagline") }
     }
