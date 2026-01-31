@@ -6,7 +6,7 @@ import WidgetKit
 
 @available(iOS 16.4, macOS 13.0, watchOS 9.0, *)
 struct HAAppEntityAppIntentEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Entity")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose entity")
 
     static let defaultQuery = HAAppEntityAppIntentEntityQuery()
 

@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 16.4, macOS 13.0, watchOS 9.0, *)
 struct IntentSceneEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Scene")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose scene")
 
     static let defaultQuery = IntentSceneAppEntityQuery()
 

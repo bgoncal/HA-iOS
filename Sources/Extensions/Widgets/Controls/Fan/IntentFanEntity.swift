@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 18.0, *)
 struct IntentFanEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Fan")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose fan")
 
     static let defaultQuery = IntentFanAppEntityQuery()
 

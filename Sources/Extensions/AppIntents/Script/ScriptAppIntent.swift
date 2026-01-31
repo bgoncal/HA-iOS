@@ -76,7 +76,7 @@ final class ScriptAppIntent: AppIntent {
 
 @available(iOS 16.4, macOS 13.0, watchOS 9.0, *)
 struct IntentScriptEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Script")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose script")
 
     static let defaultQuery = IntentScriptAppEntityQuery()
 

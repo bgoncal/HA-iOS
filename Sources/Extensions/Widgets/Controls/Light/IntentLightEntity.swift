@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 18.0, *)
 struct IntentLightEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Light")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose light")
 
     static let defaultQuery = IntentLightAppEntityQuery()
 

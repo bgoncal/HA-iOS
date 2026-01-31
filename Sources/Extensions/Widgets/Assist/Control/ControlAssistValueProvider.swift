@@ -44,7 +44,7 @@ struct ControlAssistConfiguration: ControlConfigurationIntent {
 
 @available(iOS 16.4, *)
 struct AssistPipelineEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Assist Pipeline")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose pipeline")
     static let defaultQuery = AssistPipelineEntityQuery()
 
     let id: String

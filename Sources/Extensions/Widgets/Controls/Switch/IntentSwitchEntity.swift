@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 18.0, *)
 struct IntentSwitchEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Switch")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose switch")
 
     static let defaultQuery = IntentSwitchAppEntityQuery()
 

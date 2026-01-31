@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 18.0, *)
 struct IntentButtonEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Button")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose button")
 
     static let defaultQuery = IntentButtonAppEntityQuery()
 

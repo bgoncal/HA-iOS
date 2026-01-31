@@ -5,7 +5,7 @@ import PromiseKit
 
 @available(iOS 16.4, macOS 13.0, watchOS 9.0, *)
 struct PageAppEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Page")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose page")
 
     static let defaultQuery = PageAppEntityQuery()
 

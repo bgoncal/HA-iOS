@@ -4,7 +4,7 @@ import SFSafeSymbols
 
 @available(iOS 16.4, macOS 13.0, watchOS 9.0, *)
 struct SFSymbolEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Icon")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose icon")
 
     static let defaultQuery = IntentSFSymbolAppEntityQuery()
 

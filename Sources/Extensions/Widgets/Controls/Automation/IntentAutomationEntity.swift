@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 16.4, macOS 13.0, watchOS 9.0, *)
 struct IntentAutomationEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Automation")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose automation")
 
     static let defaultQuery = IntentAutomationAppEntityQuery()
 

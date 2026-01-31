@@ -6,7 +6,7 @@ import Shared
 
 @available(iOS 18.0, *)
 struct IntentCoverEntity: AppEntity {
-    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Cover")
+    static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Choose cover")
 
     static let defaultQuery = IntentCoverAppEntityQuery()
 
