@@ -1,0 +1,36 @@
+name: Knowledge triage
+
+# yamllint disable-line rule:truthy
+on:
+  issues:
+    types: [opened, labeled]
+  workflow_dispatch:
+    inputs:
+      issue-number:
+        description: Issue to triage
+        required: true
+        type: string
+
+permissions: {}
+
+# One run per issue at a time: an ai-recheck applied during a run waits instead of racing it.
+concurrency:
+  group: knowledge-triage-${{ github.event.issue.number || inputs.issue-number }}
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    uses: TimoPtr/auto-triage/.github/workflows/triage.lock.yml@a582c4e6708ddc8af0caf6424f171e9f1f8f31e1  # v0.2.0
+    # contents and actions for the checkout and the index artifact fallback, issues for the label removal
+    # and the comment, pull-requests read for gh-aw's own conclusion jobs, copilot-requests for the agent.
+    # Issues from anyone are triaged; a labeled event runs only for ai-recheck.
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+      pull-requests: read
+      copilot-requests: write
+    with:
+      issue-number: ${{ github.event.issue.number || inputs.issue-number }}
+      event-action: ${{ github.event.action || 'dispatch' }}
+      label: ${{ github.event.label.name || '' }}

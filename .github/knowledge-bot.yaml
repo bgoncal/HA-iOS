@@ -1,0 +1,45 @@
+# Knowledge bot configuration. Schema: https://github.com/TimoPtr/auto-triage/tree/main/schemas
+version: 1
+
+product:
+  name: Home Assistant Companion for Apple Platforms
+  slug: ios
+
+providers:
+  github:
+    home-assistant/iOS:
+      issues:
+        states: [open, closed]
+        comments: true
+      pulls:
+        states: [merged, closed]
+      releases: {}
+      files:
+        - path: .agents/skills
+          kind: markdown
+    home-assistant/companion.home-assistant:
+      docs:
+        path: docs
+        baseUrl: https://companion.home-assistant.io/docs/
+    home-assistant/contributors.home-assistant.io:
+      docs:
+        path: src/content/docs/companion
+        baseUrl: https://contributors.home-assistant.io/companion/
+        audience: developer
+  discourse:
+    community.home-assistant.io:
+      categories: [ios]
+
+embedding:
+  model: Xenova/bge-small-en-v1.5
+  revision: ea104dacec62c0de699686887e3f920caeb4f3e3
+  dtype: q8
+  dimensions: 384
+  pooling: cls
+
+triage:
+  # Staged: the comment goes to the run summary, not the issue. Flip after a week of reading the summaries.
+  staged: true
+  minSimilarity: 0.35
+  # Similarity to a downvoted or dismissed earlier issue from which the verdict drops one tier. Tuning item.
+  suppressSimilarity: 0.8

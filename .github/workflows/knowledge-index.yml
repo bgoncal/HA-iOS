@@ -1,0 +1,33 @@
+name: Knowledge index
+
+# yamllint disable-line rule:truthy
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      full:
+        description: Force a full rebuild instead of an incremental build
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - .github/knowledge-bot.yaml
+      - .github/workflows/knowledge-index.yml
+
+permissions: {}
+
+jobs:
+  build:
+    uses: TimoPtr/auto-triage/.github/workflows/build-index.yml@a582c4e6708ddc8af0caf6424f171e9f1f8f31e1  # v0.2.0
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+    with:
+      slug: ios
+      checkouts: |
+        home-assistant/companion.home-assistant
+        home-assistant/contributors.home-assistant.io
+      full: ${{ github.event_name == 'workflow_dispatch' && inputs.full || false }}
