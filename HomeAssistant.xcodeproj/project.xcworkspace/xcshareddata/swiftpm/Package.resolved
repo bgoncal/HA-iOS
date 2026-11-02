@@ -1,5 +1,5 @@
 {
-  "originHash" : "df33c8810ff4ea0baf0e0587a849bccef824f284286c2fd06f255708e48d1f5a",
+  "originHash" : "8468c802d03c96fc2a9ccf6647b10f70ae76472a6f81d2c7f304c3ea7b28964d",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -222,8 +222,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SFSafeSymbols/SFSafeSymbols.git",
       "state" : {
-        "revision" : "e2e28f4e56e1769c2ec3c61c9355fc64eb7a535a",
-        "version" : "5.3.0"
+        "revision" : "e01b3d4f861412f8dcee8d93c417d2c2b0cdfd77",
+        "version" : "7.0.0"
       }
     },
     {
