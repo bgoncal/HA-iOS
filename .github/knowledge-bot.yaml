@@ -39,7 +39,7 @@ embedding:
 
 triage:
   # Staged: the comment goes to the run summary, not the issue. Flip after a week of reading the summaries.
-  staged: true
+  staged: false
   minSimilarity: 0.35
   # Similarity to a downvoted or dismissed earlier issue from which the verdict drops one tier. Tuning item.
   suppressSimilarity: 0.8
