@@ -55,6 +55,8 @@ env:
 # overrides the Android emulators need.
 jobs:
   e2e:
+    # Needs upstream secrets and runners; forks that keep the schedule/push triggers skip it.
+    if: github.repository == 'home-assistant/iOS'
     name: >-
       ${{ github.event.schedule == '0 6 * * *' && 'RestoredDeviceE2ETests'
       || inputs.test || 'OnboardingE2ETests' }}

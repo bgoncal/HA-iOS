@@ -19,6 +19,8 @@ permissions:
 
 jobs:
   build:
+    # Needs upstream secrets and runners; forks that keep the schedule/push triggers skip it.
+    if: github.repository == 'home-assistant/iOS'
     runs-on: xcode-27
     strategy:
       fail-fast: false

@@ -13,6 +13,8 @@ permissions:
 
 jobs:
   update_strings:
+    # Needs upstream secrets and runners; forks that keep the schedule/push triggers skip it.
+    if: github.repository == 'home-assistant/iOS'
     runs-on: xcode-27
     permissions:
       contents: write

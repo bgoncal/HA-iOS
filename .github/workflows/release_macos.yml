@@ -21,6 +21,8 @@ concurrency:
 
 jobs:
   release:
+    # Needs upstream secrets and runners; forks that keep the schedule/push triggers skip it.
+    if: github.repository == 'home-assistant/iOS'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

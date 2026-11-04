@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   update_brand_icons:
+    # Needs upstream secrets and runners; forks that keep the schedule/push triggers skip it.
+    if: github.repository == 'home-assistant/iOS'
     runs-on: ubuntu-latest
     permissions:
       contents: write
